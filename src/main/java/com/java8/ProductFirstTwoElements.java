@@ -1,0 +1,1 @@
+Added Product of first two elements product in a given array.
