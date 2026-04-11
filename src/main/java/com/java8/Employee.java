@@ -7,6 +7,16 @@ public class Employee {
     String emailId;
     String dept;
 
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "employeeId=" + employeeId +
+                ", name='" + name + '\'' +
+                ", emailId='" + emailId + '\'' +
+                ", dept='" + dept + '\'' +
+                '}';
+    }
+
     public Long getEmployeeId() {
         return employeeId;
     }
