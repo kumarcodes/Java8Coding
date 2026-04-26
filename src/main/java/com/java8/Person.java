@@ -5,10 +5,20 @@ import java.util.List;
 public class Person {
     String name;
     List<String> color;
+    int age;
 
-    public Person(String name, List<String> color) {
+    public Person(String name, List<String> color, int age) {
         this.name = name;
         this.color = color;
+        this.age = age;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public String getName() {
