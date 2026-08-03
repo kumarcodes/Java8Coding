@@ -12,6 +12,7 @@ public class GroupByDept {
         Map<String, Optional<Employees>> map = employees.stream().collect(Collectors.groupingBy(Employees::getDepartment,
                 Collectors.maxBy(Comparator.comparingDouble(Employees::getSalary))
         ));
+
         System.out.println(map);
     }
 }
