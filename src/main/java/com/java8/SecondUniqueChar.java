@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 public class SecondUniqueChar {
     public static void main(String[] args) {
-        String str = "rohit sharma";
+        String str = "rohit kumar sharma";
         String secondUniqueChar = Arrays.stream(str.replace(" ", "").split(""))
                 .collect(Collectors.groupingBy(x -> x, LinkedHashMap::new, Collectors.counting()))
                 .entrySet().stream().filter(x -> x.getValue() == 1)
