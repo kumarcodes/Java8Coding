@@ -8,5 +8,7 @@ public class WordLengthCounter {
         Arrays.stream(str.split(" ")).map(String::toUpperCase).filter(x -> x.length() < 4)
                 .forEach(System.out::println);
 
+
+
     }
 }
