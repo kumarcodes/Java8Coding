@@ -28,6 +28,7 @@ public class DepartmentSalaryReport {
                         Collectors.collectingAndThen(Collectors.toList(), DepartmentSalaryReport::summarize)
                 ));
 
+
         report.forEach((dept, summary) -> System.out.println(dept + " -> " + summary));
     }
 
