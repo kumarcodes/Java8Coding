@@ -60,6 +60,7 @@ public class EmployeeDTO {
                 Arrays.asList(e1, e2, e3, e4, e5, e6);
         List<String> names = empList.stream().filter(x -> x.projList.stream().anyMatch(y -> y.getProjectName().equals("E-Commerce")))
                 .map(x -> x.name).toList();
+
         System.out.println(names);
     }
 }
