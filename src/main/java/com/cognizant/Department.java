@@ -10,6 +10,7 @@ public class Department {
                 "departmentId='" + departmentId + '\'' +
                 ", departmentName='" + departmentName + '\'' +
                 '}';
+
     }
 
     public String getDepartmentName() {
