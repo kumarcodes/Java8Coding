@@ -8,7 +8,7 @@ public class OddEvenThread {
             for (int i = 1; i <= 29; i = i + 2) {
                 System.out.println(i);
                 try {
-                    Thread.sleep(3000);
+                    Thread.sleep(1000);
                 } catch (InterruptedException ignored) {
                 }
 
@@ -19,14 +19,14 @@ public class OddEvenThread {
             for (int i = 2; i <= 30; i = i + 2) {
                 System.out.println(i);
                 try {
-                    Thread.sleep(3000);
+                    Thread.sleep(1000);
                 } catch (InterruptedException ignored) {
 
                 }
             }
         });
         t1.start();
-        Thread.sleep(2000);
+        Thread.sleep(700);
         t2.start();
     }
 }
