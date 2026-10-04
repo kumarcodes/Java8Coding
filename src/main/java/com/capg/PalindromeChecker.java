@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class PalindromeChecker {
 
@@ -11,8 +12,11 @@ public class PalindromeChecker {
 
         String str = "level";
 
-        System.out.println("Stream Solution: "
+        System.out.println("Stream Solution 1: "
                 + isPalindromeUsingStreams(str));
+
+        System.out.println("Stream Solution 2: "
+                + isPalindromeUsingStreamsAlternateApproach(str));
 
         System.out.println("Two Pointer Solution: "
                 + isPalindromeUsingTwoPointer(str));
@@ -30,6 +34,12 @@ public class PalindromeChecker {
                 .collect(Collectors.joining());
 
         return reversed.equals(str);
+    }
+
+    // Solution 2: Using Streams
+    public static boolean isPalindromeUsingStreamsAlternateApproach(String str) {
+
+        return IntStream.range(0, str.length() / 2).allMatch(x -> str.charAt(x) == str.charAt(str.length() - x - 1));
     }
 
     // Solution 2: Using Two Pointer
